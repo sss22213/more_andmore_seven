@@ -40,5 +40,6 @@ void setSeven(four_clock*,int,int);
 void system_Init(void);
 //timer
 unsigned long timer;
+unsigned long count;
 
 #endif /* CLOCK_H_ */

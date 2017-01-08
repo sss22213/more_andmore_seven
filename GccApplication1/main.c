@@ -36,6 +36,7 @@ void modify(four_clock * obj)
 		m=m>11?0:m;
 	}
 	timer=m*60+s;
+	count=0;
 }
 int main(void)
 {
@@ -55,7 +56,12 @@ int main(void)
 }
 ISR(TIMER1_COMPA_vect)
 {
-	timer=((timer>720)?0:timer);
-	timer++;
+	if(count>58)
+	{
+		timer=((timer>720)?0:timer);
+		timer++;
+		count=0;
+	}
+	else count++;
 }
 

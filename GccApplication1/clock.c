@@ -13,7 +13,8 @@ void Seven_out(unsigned char x)
 void system_Init()
 {
 	Seven_Init;
-	OCR1A = 0x3D08;
+	count=0;
+	OCR1A = 0x3D17;
 	//OCR1A = 0x0100;
 	TCCR1B |= (1 << WGM12);
 	// Mode 4, CTC on OCR1A
